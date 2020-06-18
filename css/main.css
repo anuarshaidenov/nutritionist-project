@@ -139,7 +139,7 @@ header nav .nav-links {
 
 .section-process {
   text-align: center;
-  padding: 1rem 0;
+  padding: 3rem 0;
 }
 
 .section-process__showcase {
@@ -254,5 +254,43 @@ header nav .nav-links {
   font-size: 1rem;
   font-weight: 500;
   line-height: 1.2rem;
+}
+
+.section-testimonials {
+  padding: 2rem 0;
+  background: url(../images/background-mountains.png);
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.section-testimonials__testimonial {
+  background: white;
+  -webkit-box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.25);
+          box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+  padding: 2rem;
+}
+
+.section-testimonials__testimonial--text {
+  font-size: .8rem;
+  font-weight: 700;
+  font-style: italic;
+}
+
+.section-testimonials__testimonial--name {
+  margin-top: .8rem;
+  position: relative;
+  font-style: italic;
+  font-size: .8rem;
+}
+
+.section-testimonials__testimonial--name::before {
+  content: " ";
+  width: 10px;
+  height: 1px;
+  background-color: black;
+  position: absolute;
+  left: -14px;
+  top: 40%;
 }
 /*# sourceMappingURL=main.css.map */
