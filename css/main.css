@@ -210,4 +210,49 @@ header nav .nav-links {
   margin: 2rem auto;
   width: 60%;
 }
+
+.section-components {
+  background-color: #F9F4F4;
+  text-align: center;
+  padding: 2rem 0;
+}
+
+.section-components h2 {
+  margin-bottom: 3rem;
+}
+
+.section-components__component {
+  background: white;
+  width: 90%;
+  margin: 0 auto 1rem;
+  padding: 3rem;
+  -webkit-box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+          box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  -webkit-transition: -webkit-transform .2s;
+  transition: -webkit-transform .2s;
+  transition: transform .2s;
+  transition: transform .2s, -webkit-transform .2s;
+}
+
+.section-components__component:hover {
+  -webkit-transform: translateY(-0.5rem);
+          transform: translateY(-0.5rem);
+}
+
+.section-components__component--icon {
+  width: 70px;
+  margin: 0 auto;
+}
+
+.section-components__component h3 {
+  margin: 1rem 0 3rem;
+}
+
+.section-components__component--text {
+  color: #444343;
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.2rem;
+}
 /*# sourceMappingURL=main.css.map */
