@@ -260,4 +260,71 @@ header {
     }
 }
 
+.section-signup {
+    text-align: center;
+    padding: 2rem 0;
+
+    &__text {
+        font-size: .9rem;
+        font-weight: 500;
+        margin: 2rem 0 1rem;
+    }
+
+    &__left {
+        &--signup-form {
+            display: flex;
+            flex-direction: column;
+            
+            label {
+                text-align: left;
+                font-size: .8rem;
+                font-weight: 700;
+                margin: .6rem 0 .2rem;
+            }
+
+            input {
+                padding: .4rem;
+            }
+
+            input, textarea {
+                border: 2px solid $color-primary;
+                border-radius: 5px;
+
+                &:focus {
+                    outline: none;
+                }
+            }
+
+            .btn {
+                margin-top: 1rem;
+                width: 100%;
+                font-weight: 700;
+                font-size: 1rem;
+
+                &:focus {
+                    outline: none;
+                }
+            }
+        }
+    }
+
+    &__right {
+        position: relative;
+        margin-top: 3rem;
+        &:before {
+            position: absolute;
+            content: "";
+            background: $color-primary;
+            width: 80%;
+            height: 2px;
+            top: -20px;
+            left: 10%;
+        }
+
+        .btn:first-of-type {
+            margin-bottom: 1rem;
+        }
+    }
+}
+
 

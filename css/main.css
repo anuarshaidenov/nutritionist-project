@@ -293,4 +293,75 @@ header nav .nav-links {
   left: -14px;
   top: 40%;
 }
+
+.section-signup {
+  text-align: center;
+  padding: 2rem 0;
+}
+
+.section-signup__text {
+  font-size: .9rem;
+  font-weight: 500;
+  margin: 2rem 0 1rem;
+}
+
+.section-signup__left--signup-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.section-signup__left--signup-form label {
+  text-align: left;
+  font-size: .8rem;
+  font-weight: 700;
+  margin: .6rem 0 .2rem;
+}
+
+.section-signup__left--signup-form input {
+  padding: .4rem;
+}
+
+.section-signup__left--signup-form input, .section-signup__left--signup-form textarea {
+  border: 2px solid #2ECC71;
+  border-radius: 5px;
+}
+
+.section-signup__left--signup-form input:focus, .section-signup__left--signup-form textarea:focus {
+  outline: none;
+}
+
+.section-signup__left--signup-form .btn {
+  margin-top: 1rem;
+  width: 100%;
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+.section-signup__left--signup-form .btn:focus {
+  outline: none;
+}
+
+.section-signup__right {
+  position: relative;
+  margin-top: 3rem;
+}
+
+.section-signup__right:before {
+  position: absolute;
+  content: "";
+  background: #2ECC71;
+  width: 80%;
+  height: 2px;
+  top: -20px;
+  left: 10%;
+}
+
+.section-signup__right .btn:first-of-type {
+  margin-bottom: 1rem;
+}
 /*# sourceMappingURL=main.css.map */
