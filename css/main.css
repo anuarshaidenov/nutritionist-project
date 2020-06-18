@@ -26,6 +26,10 @@ h1 {
   font-size: 2rem;
 }
 
+h2 {
+  margin: 1rem 0;
+}
+
 a {
   text-decoration: none;
 }
@@ -76,11 +80,39 @@ header nav .nav-links {
 
 .section-hero__textbox {
   text-align: center;
-  margin-top: 2rem;
+  margin: 2rem 0 3rem;
 }
 
 .section-hero__textbox p {
   font-weight: 500;
   margin: .5rem 0 1rem;
+}
+
+.section-about {
+  background: #F9F4F4;
+  padding: 1rem 0;
+}
+
+.section-about__illustration {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.section-about__illustration--doctor {
+  width: 100px;
+}
+
+.section-about__illustration--fruit {
+  width: 50px;
+}
+
+.section-about__textbox {
+  text-align: center;
 }
 /*# sourceMappingURL=main.css.map */

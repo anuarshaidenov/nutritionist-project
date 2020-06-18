@@ -31,6 +31,10 @@ h1 {
     font-size: 2rem;
 }
 
+h2 {
+    margin: 1rem 0;
+}
+
 a {
     text-decoration: none;
 }
@@ -71,21 +75,38 @@ header {
 }
 
 .section-hero {
-
     &__img {
         width: 60%;
         margin: 0 auto;
     }
     &__textbox {
         text-align: center;
-        margin-top: 2rem;
+        margin: 2rem 0 3rem;
         p {
             font-weight: 500;
             margin: .5rem 0 1rem;
         }
-
     }
-    
+}
+
+.section-about {
+    background: $color-background-secondary;
+    padding: 1rem 0;
+    &__illustration {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        &--doctor {
+            width: 100px;
+        }
+
+        &--fruit {
+            width: 50px;
+        }
+    }
+    &__textbox {
+        text-align: center;
+    }
 }
 
 
