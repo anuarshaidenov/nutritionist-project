@@ -40,17 +40,28 @@ a {
   display: block;
   width: 80%;
   margin: 0 auto;
+  text-align: center;
+  border-radius: 5px;
 }
 
 .btn-cta {
   background: #2ECC71;
   border: none;
-  border-radius: 5px;
   color: white;
 }
 
 .btn-cta:hover {
   background: #2aad61;
+}
+
+.btn-secondary {
+  border: 2px #2ECC71 solid;
+  color: #2ECC71;
+}
+
+.btn-secondary:hover {
+  background: #2ECC71;
+  color: white;
 }
 
 header {
@@ -90,7 +101,7 @@ header nav .nav-links {
 
 .section-about {
   background: #F9F4F4;
-  padding: 1rem 0;
+  padding: 2rem 0;
 }
 
 .section-about__illustration {
@@ -114,5 +125,89 @@ header nav .nav-links {
 
 .section-about__textbox {
   text-align: center;
+}
+
+.section-about__textbox h2 {
+  font-weight: 700;
+}
+
+.section-about__textbox p {
+  font-weight: 500;
+  color: #444343;
+  line-height: 1.3rem;
+}
+
+.section-process {
+  text-align: center;
+  padding: 1rem 0;
+}
+
+.section-process__showcase {
+  margin-top: 2rem;
+}
+
+.section-process__showcase--steps {
+  list-style: none;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  -ms-grid-rows: (1fr)[4];
+      grid-template-rows: repeat(4, 1fr);
+      grid-template-areas: "one one ." ". two two" "three  three ." ". four four";
+}
+
+.section-process__showcase--steps li {
+  margin: 1rem 0;
+  text-align: center;
+}
+
+.section-process__showcase--steps .step-1 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: one;
+}
+
+.section-process__showcase--steps .step-2 {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 2;
+  grid-area: two;
+}
+
+.section-process__showcase--steps .step-3 {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: three;
+}
+
+.section-process__showcase--steps .step-4 {
+  -ms-grid-row: 4;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 2;
+  grid-area: four;
+}
+
+.section-process__showcase--steps-step {
+  border: 3px #2ECC71 solid;
+  padding: .5rem 1rem;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-right: .5rem;
+}
+
+.section-process__showcase--steps-text {
+  display: inline-block;
+  font-weight: 500;
+  -webkit-transform: translateY(-5px);
+          transform: translateY(-5px);
+}
+
+.section-process__showcase--illustration {
+  margin: 2rem auto;
+  width: 60%;
 }
 /*# sourceMappingURL=main.css.map */

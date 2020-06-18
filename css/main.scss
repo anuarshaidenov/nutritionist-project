@@ -5,6 +5,8 @@ $color-primary--dark: #2aad61;
 
 $color-background-secondary: #F9F4F4;
 
+$color-text-secondary: #444343;
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -45,12 +47,13 @@ a {
     display: block;
     width: 80%;
     margin: 0 auto;
+    text-align: center;
+    border-radius: 5px;
 }
 
 .btn-cta {
     background: $color-primary;
     border: none;
-    border-radius: 5px;
     color: white;
 
     &:hover {
@@ -58,6 +61,15 @@ a {
     }
 }
 
+.btn-secondary {
+    border: 2px $color-primary solid;
+    color: $color-primary;
+
+    &:hover {
+        background: $color-primary;
+        color: white;
+    }
+}
 
 header {
     display: flex;
@@ -91,7 +103,7 @@ header {
 
 .section-about {
     background: $color-background-secondary;
-    padding: 1rem 0;
+    padding: 2rem 0;
     &__illustration {
         display: flex;
         justify-content: space-around;
@@ -106,8 +118,73 @@ header {
     }
     &__textbox {
         text-align: center;
+        h2 {
+            font-weight: 700;
+        }
+        p {
+            font-weight: 500;
+            color: $color-text-secondary;
+            line-height: 1.3rem;
+        }
     }
 }
+
+.section-process {
+    text-align: center;
+    padding: 1rem 0;
+    &__showcase {
+        margin-top: 2rem;
+        &--steps {
+            list-style: none;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(4, 1fr);
+            grid-template-areas: "one one ."
+                                 ". two two"
+                                 "three  three ."
+                                 ". four four";
+            li {
+                margin: 1rem 0;
+                text-align: center;
+            }
+
+            .step-1 {
+                grid-area: one;
+            }
+            .step-2 {
+                grid-area: two;
+            }
+            .step-3 {
+                grid-area: three;
+            }
+            .step-4 {
+                grid-area: four;
+            }
+
+            &-step {
+                border: 3px $color-primary solid;
+                padding: .5rem 1rem;
+                border-radius: 50%;
+                font-size: 1.5rem;
+                font-weight: 700;
+                margin-right: .5rem;    
+            }
+            
+            &-text {
+                display: inline-block;
+                font-weight: 500;
+                transform: translateY(-5px);
+            }
+        }
+
+        &--illustration {
+            margin: 2rem auto;
+            width: 60%;
+        }
+
+    }
+}
+
 
 
 
