@@ -100,7 +100,8 @@ header nav .nav-links {
 }
 
 .section-about {
-  background: #F9F4F4;
+  background: -webkit-gradient(linear, left top, left bottom, from(#FFFFFF), to(rgba(255, 255, 255, 0))), #F9F4F4;
+  background: linear-gradient(180deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%), #F9F4F4;
   padding: 2rem 0;
 }
 
@@ -297,6 +298,7 @@ header nav .nav-links {
 .section-signup {
   text-align: center;
   padding: 2rem 0;
+  margin-bottom: 2rem;
 }
 
 .section-signup__text {
@@ -363,5 +365,33 @@ header nav .nav-links {
 
 .section-signup__right .btn:first-of-type {
   margin-bottom: 1rem;
+}
+
+footer {
+  padding: 3rem 0;
+  background: -webkit-gradient(linear, left top, left bottom, from(#FFFFFF), to(rgba(255, 255, 255, 0))), #2ECC71;
+  background: linear-gradient(180deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%), #2ECC71;
+}
+
+footer .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+footer .container a:hover {
+  color: white;
+}
+
+footer .container .email {
+  font-weight: 500;
+  color: black;
+}
+
+footer .container .footer-links img {
+  width: 25px;
 }
 /*# sourceMappingURL=main.css.map */
