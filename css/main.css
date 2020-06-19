@@ -10,6 +10,49 @@ body {
   font-family: 'Roboto', sans-serif;
 }
 
+.backdrop {
+  background: rgba(0, 0, 0, 0.3);
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+}
+
+#menu-mobile {
+  position: fixed;
+  background: rgba(46, 204, 113, 0.8);
+  width: 70vw;
+  height: 100vh;
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+  -webkit-transition: all .2s ease-in;
+  transition: all .2s ease-in;
+}
+
+#menu-mobile ul {
+  padding-left: 20%;
+  padding-top: 40%;
+  list-style: none;
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+#menu-mobile ul li {
+  margin-bottom: 1rem;
+}
+
+#menu-mobile ul li a {
+  color: black;
+}
+
+#menu-mobile ul li a:hover {
+  color: white;
+}
+
+.mobile-hidden {
+  -webkit-transform: translateX(0) !important;
+          transform: translateX(0) !important;
+}
+
 img {
   width: 100%;
 }
@@ -74,14 +117,13 @@ header {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  padding: 1rem 0;
 }
 
 header nav .menu {
-  width: 30px;
-}
-
-header nav .nav-links {
-  display: none;
+  z-index: 5;
+  width: 40px;
+  cursor: pointer;
 }
 
 .section-hero__img {
@@ -139,8 +181,8 @@ header nav .nav-links {
 }
 
 .section-process {
-  text-align: center;
   padding: 3rem 0;
+  text-align: center;
 }
 
 .section-process__showcase {
@@ -156,11 +198,14 @@ header nav .nav-links {
   -ms-grid-rows: (1fr)[4];
       grid-template-rows: repeat(4, 1fr);
       grid-template-areas: "one one ." ". two two" "three  three ." ". four four";
+  justify-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .section-process__showcase--steps li {
   margin: 1rem 0;
-  text-align: center;
 }
 
 .section-process__showcase--steps .step-1 {

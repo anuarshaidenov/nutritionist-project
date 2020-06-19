@@ -17,6 +17,44 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 
+.backdrop {
+    background: rgba($color: #000000, $alpha: .3);
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+}
+
+#menu-mobile {
+    position: fixed;
+    background: rgba($color-primary, 0.8);
+    width: 70vw;
+    height: 100vh;
+    transform: translateX(-100%);
+    transition: all .2s ease-in;
+    
+    ul {
+        padding-left: 20%;
+        padding-top: 40%;
+        list-style: none;
+        font-size: 2rem;
+        font-weight: 500;
+
+        li {
+            margin-bottom: 1rem;
+            a {
+                color: black;
+                &:hover {
+                    color: white;
+                }
+            }
+        }
+    }
+}
+
+.mobile-hidden {
+    transform: translateX(0) !important;
+}
+
 img {
     width: 100%;
 }
@@ -75,13 +113,13 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 1rem 0;
 
     nav {
         .menu {
-            width: 30px;
-        }
-        .nav-links {
-            display: none;
+            z-index: 5;
+            width: 40px;
+            cursor: pointer;
         }
     }
 }
@@ -130,8 +168,8 @@ header {
 }
 
 .section-process {
-    text-align: center;
     padding: 3rem 0;
+    text-align: center;
     &__showcase {
         margin-top: 2rem;
         &--steps {
@@ -143,9 +181,10 @@ header {
                                  ". two two"
                                  "three  three ."
                                  ". four four";
+            justify-items: center;
+            align-items: center;
             li {
                 margin: 1rem 0;
-                text-align: center;
             }
 
             .step-1 {
@@ -167,7 +206,7 @@ header {
                 border-radius: 50%;
                 font-size: 1.5rem;
                 font-weight: 700;
-                margin-right: .5rem;    
+                margin-right: .5rem;
             }
             
             &-text {
