@@ -37,6 +37,7 @@ body {
     transform: translateX(-100%);
     transition: all .2s ease-in;
     opacity: 0;
+    z-index: 5;
 
     ul {
         display: flex;
@@ -49,11 +50,10 @@ body {
 
         li {
             margin-bottom: 1rem;
-            a {
-                color: black;
-                &:hover {
-                    color: white;
-                }
+            cursor: pointer;
+            
+            &:hover {
+                color: white;
             }
         }
     }
@@ -90,12 +90,15 @@ a {
 
 .btn {
     padding: 1rem;
-    font-weight: 500;
+    font-weight: 700;
     display: block;
     width: 80%;
     margin: 0 auto;
     text-align: center;
     border-radius: 5px;
+    &:focus {
+        outline: none;
+    }
 }
 
 .btn-cta {
@@ -416,6 +419,9 @@ footer {
 }
 
 @media (min-width: 760px) {
+    #menu-mobile {
+        display: none;
+    }
     .btn {
         width: 15rem;
         font-size: .8rem;

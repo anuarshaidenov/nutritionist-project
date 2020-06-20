@@ -38,6 +38,7 @@ body {
   -webkit-transition: all .2s ease-in;
   transition: all .2s ease-in;
   opacity: 0;
+  z-index: 5;
 }
 
 #menu-mobile ul {
@@ -59,13 +60,10 @@ body {
 
 #menu-mobile ul li {
   margin-bottom: 1rem;
+  cursor: pointer;
 }
 
-#menu-mobile ul li a {
-  color: black;
-}
-
-#menu-mobile ul li a:hover {
+#menu-mobile ul li:hover {
   color: white;
 }
 
@@ -101,12 +99,16 @@ a {
 
 .btn {
   padding: 1rem;
-  font-weight: 500;
+  font-weight: 700;
   display: block;
   width: 80%;
   margin: 0 auto;
   text-align: center;
   border-radius: 5px;
+}
+
+.btn:focus {
+  outline: none;
 }
 
 .btn-cta {
@@ -486,6 +488,9 @@ footer .container .footer-links img {
 }
 
 @media (min-width: 760px) {
+  #menu-mobile {
+    display: none;
+  }
   .btn {
     width: 15rem;
     font-size: .8rem;

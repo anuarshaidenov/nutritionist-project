@@ -1,32 +1,24 @@
-function smoothScroll(target, duration) {
-    const target = document.querySelector(target);
-    const targetPosition = target.getBoundingClientRect().top;
-    const startPosition = window.pageYOffset;
-    const distance = targetPosition - startPosition;
-    let startTime = null;
+const links = document.querySelectorAll('#menu-mobile li');
+const sectionProcess = document.querySelector('.section-process');
+const sectionTestimonials = document.querySelector('.section-testimonials');
+const sectionSignup = document.querySelector('.section-signup');
+const buttons = document.querySelectorAll('#scroll');
 
-    function animation(currentTime) {
-        if (startTime === null) startTime = currentTime;
-        let timeElapsed = currentTime - startTime;
-        let run = ease(timeElapsed, startPosition, distance, duration);
-        window.scrollTo(0, run);
-        if (timeElapsed < duration) requestAnimationFrame(animation);
-    }
+const sections = [sectionProcess, sectionTestimonials, sectionSignup];
 
-    function ease(t, b, c, d) {
-        t /= d / 2;
-        if (t < 1) return c / 2 * t * t + b;
-        t--;
-        return -c / 2 * (t * (t - 2) - 1) + b;
-    }
-
-    requestAnimationFrame(animation)
+for(let i = 0; i < links.length; i++) {
+    links[i].addEventListener('click', () => {
+        sections[i].scrollIntoView({ behavior: 'smooth', block: 'center'});
+        menuImg.src = "./svg/menu.svg";
+        menu.classList.remove('mobile-show');
+        if (scrolled) {
+            menuIcon.classList.add('scrolled');
+        }
+    });
 }
 
-menuMobileLinks = document.querySelectorAll("#menu-mobile ul li a");
-
-menuMobileLinks.forEach(link => {
-    link.addEventListener('click', () => {
-        alert('clicked');
+buttons.forEach((button) => {
+    button.addEventListener('click', () => {
+        sectionSignup.scrollIntoView({ behavior: 'smooth', block: 'center'});
     });
-})
+});
