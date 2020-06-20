@@ -1,0 +1,22 @@
+{
+  "name": "nutrtion-consultant",
+  "version": "1.0.0",
+  "description": "Project website for Nutritionist",
+  "main": "index.js",
+  "scripts": {
+    "deploy": "gh-pages -d dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/anuarshaidenov/nutritionist-project.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/anuarshaidenov/nutritionist-project/issues"
+  },
+  "homepage": "https://github.com/anuarshaidenov/nutritionist-project",
+  "dependencies": {
+    "gh-pages": "^3.0.0"
+  }
+}

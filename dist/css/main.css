@@ -33,6 +33,13 @@
           transform: rotate(180deg);
 }
 
+.error {
+  display: none;
+  margin-top: 1rem;
+  text-align: center;
+  color: red;
+}
+
 ::-moz-selection {
   background: #2ECC71;
   color: black;
@@ -205,15 +212,17 @@ header nav .menu {
 .section-hero__img {
   width: 60%;
   margin: 0 auto;
-  -webkit-animation: comeIn 1s ease-out;
-          animation: comeIn 1s ease-out;
+  opacity: 0;
+  -webkit-animation: comeIn 1s ease-out forwards;
+          animation: comeIn 1s ease-out forwards;
 }
 
 .section-hero__textbox {
   text-align: center;
+  opacity: 0;
   margin: 2rem 0 3rem;
-  -webkit-animation: comeIn 1s ease-out .2s;
-          animation: comeIn 1s ease-out .2s;
+  -webkit-animation: comeIn 1s ease-out .2s forwards;
+          animation: comeIn 1s ease-out .2s forwards;
 }
 
 .section-hero__textbox p {

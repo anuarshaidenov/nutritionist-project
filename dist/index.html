@@ -68,7 +68,7 @@
             <div class="section-process__showcase">
                 <ul class="section-process__showcase--steps">
                     <li class="step-1" data-scroll><span class="section-process__showcase--steps-step">1</span><p class="section-process__showcase--steps-text">запись на консультацию</p></li>
-                    <li class="step-2" data-scroll><span class="section-process__showcase--steps-step">2</span><p class="section-process__showcase--steps-text">беседа с пациентом</p></li>
+                    <li class="step-2" data-scroll><span class="section-process__showcase--steps-step">2</span><p class="section-process__showcase--steps-text">диагностика</p></li>
                     <li class="step-3" data-scroll><span class="section-process__showcase--steps-step">3</span><p class="section-process__showcase--steps-text">схема лечения</p></li>
                     <li class="step-4" data-scroll><span class="section-process__showcase--steps-step">4</span><p class="section-process__showcase--steps-text">online поддержка</p></li>
                 </ul>
@@ -142,14 +142,15 @@
         <div class="container">
             <div class="section-signup__left">
                 <p class="section-signup__text">ВСЕ ОЧЕНЬ ПРОСТО! ОСТАВЬТЕ СВОЙ WHAT’S APP ИЛИ TELEGRAM НОМЕР И Я БЫСТРО С ВАМИ СВЯЖУСЬ</p>
-                <form action="" class="section-signup__left--signup-form">
+                <form action="/signup" class="section-signup__left--signup-form" method="POST">
                     <label for="name">Ваше имя</label>
                     <input type="text" name="name" id="name">
                     <label for="phone">What’s App или Telegram номер</label>
-                    <input type="tel" name="phone" id="phone">
+                    <input type="tel" name="phone" id="phone" required pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}">
                     <label for="description">Что вас беспокоит? (по желанию)</label>
                     <textarea name="description" id="description" cols="30" rows="10"></textarea>
                     <button type="submit" class="btn btn-cta">ЗАПИСАТЬСЯ</button>
+                    <p class="error">Пожалуйста введите свой номер</p>
                 </form>
             </div>
             <div class="section-signup__right">

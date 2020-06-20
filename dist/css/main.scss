@@ -39,6 +39,13 @@ $color-text-secondary: #444343;
     transform: rotate(180deg);
 }
 
+.error {
+    display: none;
+    margin-top: 1rem;
+    text-align: center;
+    color: red;
+}
+
 ::selection {
     background: $color-primary;
     color: black;
@@ -184,16 +191,18 @@ header {
     &__img {
         width: 60%;
         margin: 0 auto;
-        animation: comeIn 1s ease-out;
+        opacity: 0;
+        animation: comeIn 1s ease-out forwards;
     }
     &__textbox {
         text-align: center;
+        opacity: 0;
         margin: 2rem 0 3rem;
         p {
             font-weight: 500;
             margin: .5rem 0 1rem;
         }
-        animation: comeIn 1s ease-out .2s;
+        animation: comeIn 1s ease-out .2s forwards;
     }
 }
 
