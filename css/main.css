@@ -153,6 +153,15 @@ header nav .nav-links {
   display: none;
 }
 
+header nav .nav-links .nav-link {
+  cursor: pointer;
+  font-weight: 500;
+}
+
+header nav .nav-links .nav-link:hover {
+  color: #2ECC71;
+}
+
 header nav .menu {
   z-index: 10;
   position: fixed;
@@ -504,10 +513,10 @@ footer .container .footer-links img {
     max-width: 1200px;
     margin: 0 auto;
   }
-  nav {
+  header nav {
     z-index: 9;
   }
-  nav .nav-links {
+  header nav .nav-links {
     display: -webkit-box !important;
     display: -ms-flexbox !important;
     display: flex !important;
@@ -516,11 +525,11 @@ footer .container .footer-links img {
             justify-content: space-between;
     list-style: none;
   }
-  nav .nav-links .nav-link a {
+  header nav .nav-links .nav-link a {
     color: black;
     font-weight: 500;
   }
-  nav .nav-links .nav-link a:hover {
+  header nav .nav-links .nav-link a:hover {
     color: #2ECC71;
   }
   #ham {
@@ -635,7 +644,10 @@ footer .container .footer-links img {
     margin-bottom: 5rem;
   }
   .section-signup__right::before {
-    display: none;
+    left: -35%;
+    top: 50%;
+    -webkit-transform: rotate(90deg);
+            transform: rotate(90deg);
   }
   .section-signup__right .btn {
     margin: 0 auto;

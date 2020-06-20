@@ -132,7 +132,13 @@ header {
         width: 50%;
         .nav-links {
             display: none;
-
+            .nav-link {
+                cursor: pointer;
+                font-weight: 500;
+                &:hover {
+                    color: $color-primary;
+                }
+            }
         }
         .menu {
             z-index: 10;
@@ -437,23 +443,27 @@ footer {
         margin: 0 auto;
     }
 
-    nav {
-        z-index: 9;
-        .nav-links {
-            display: flex !important;
-            justify-content: space-between;
-            list-style: none;
-            .nav-link {
-                a {
-                    color: black;
-                    font-weight: 500;
-                    &:hover {
-                        color: $color-primary;
+    header {
+        nav {
+            z-index: 9;
+            .nav-links {
+                display: flex !important;
+                justify-content: space-between;
+                list-style: none;
+                .nav-link {
+                    a {
+                        color: black;
+                        font-weight: 500;
+                        &:hover {
+                            color: $color-primary;
+                        }
                     }
                 }
             }
         }
     }
+
+    
     
     #ham {
         display: none;
@@ -572,7 +582,9 @@ footer {
             }
 
             &::before {
-                display: none;
+                left: -35%;
+                top: 50%;
+                transform: rotate(90deg);
             }
 
             .btn {
