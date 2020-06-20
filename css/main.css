@@ -132,6 +132,7 @@ a {
   margin: 0 auto;
   text-align: center;
   border-radius: 5px;
+  cursor: pointer;
 }
 
 .btn:focus {
@@ -276,7 +277,7 @@ header nav .menu {
       grid-template-columns: repeat(3, 1fr);
   -ms-grid-rows: (1fr)[4];
       grid-template-rows: repeat(4, 1fr);
-      grid-template-areas: "one one ." ". two two" "three  three ." ". four four";
+      grid-template-areas: "one one one" "two two two" "three  three three" "four four four";
   justify-items: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -290,28 +291,28 @@ header nav .menu {
 .section-process__showcase--steps .step-1 {
   -ms-grid-row: 1;
   -ms-grid-column: 1;
-  -ms-grid-column-span: 2;
+  -ms-grid-column-span: 3;
   grid-area: one;
 }
 
 .section-process__showcase--steps .step-2 {
   -ms-grid-row: 2;
-  -ms-grid-column: 2;
-  -ms-grid-column-span: 2;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
   grid-area: two;
 }
 
 .section-process__showcase--steps .step-3 {
   -ms-grid-row: 3;
   -ms-grid-column: 1;
-  -ms-grid-column-span: 2;
+  -ms-grid-column-span: 3;
   grid-area: three;
 }
 
 .section-process__showcase--steps .step-4 {
   -ms-grid-row: 4;
-  -ms-grid-column: 2;
-  -ms-grid-column-span: 2;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
   grid-area: four;
 }
 
@@ -520,6 +521,12 @@ footer .container .footer-links img {
   width: 25px;
 }
 
+@media (min-width: 401px) {
+  .section-process__showcase--steps {
+        grid-template-areas: "one one ." ". two two" "three three ." ". four four";
+  }
+}
+
 @media (min-width: 620px) {
   .section-hero__img {
     width: 40%;
@@ -699,9 +706,16 @@ footer .container .footer-links img {
   transition: all 2s;
 }
 
+[data-scroll="out"] {
+  opacity: 0;
+  -webkit-transform: translateX(-200px);
+          transform: translateX(-200px);
+}
+
 [data-scroll="in"] {
-  -webkit-animation: comeIn 1s ease-in;
-          animation: comeIn 1s ease-in;
+  opacity: 1;
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
 }
 
 @-webkit-keyframes comeIn {

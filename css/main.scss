@@ -122,6 +122,7 @@ a {
     margin: 0 auto;
     text-align: center;
     border-radius: 5px;
+    cursor: pointer;
     &:focus {
         outline: none;
     }
@@ -234,10 +235,10 @@ header {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             grid-template-rows: repeat(4, 1fr);
-            grid-template-areas: "one one ."
-                                 ". two two"
-                                 "three  three ."
-                                 ". four four";
+            grid-template-areas: "one one one"
+                                 "two two two"
+                                 "three  three three"
+                                 "four four four";
             justify-items: center;
             align-items: center;
             li {
@@ -249,6 +250,7 @@ header {
             }
             .step-2 {
                 grid-area: two;
+                
             }
             .step-3 {
                 grid-area: three;
@@ -448,6 +450,15 @@ footer {
     }
 }
 
+@media (min-width: 401px) {
+    .section-process__showcase--steps {
+        grid-template-areas: "one one ."
+                             ". two two"
+                             "three three ."
+                             ". four four";
+    }
+}
+
 
 @media (min-width: 620px) {
     .section-hero__img { width: 40%; }
@@ -636,8 +647,14 @@ footer {
     transition: all 2s;
 }
 
+[data-scroll="out"] {
+    opacity: 0;
+    transform: translateX(-200px);
+}
+
 [data-scroll="in"] {
-    animation: comeIn 1s ease-in;
+    opacity: 1;
+    transform: translateX(0);
 }
 
 @keyframes comeIn {
