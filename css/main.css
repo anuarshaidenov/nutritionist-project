@@ -204,11 +204,15 @@ header nav .menu {
 .section-hero__img {
   width: 60%;
   margin: 0 auto;
+  -webkit-animation: comeIn 1s ease-out;
+          animation: comeIn 1s ease-out;
 }
 
 .section-hero__textbox {
   text-align: center;
   margin: 2rem 0 3rem;
+  -webkit-animation: comeIn 1s ease-out .2s;
+          animation: comeIn 1s ease-out .2s;
 }
 
 .section-hero__textbox p {
@@ -687,6 +691,42 @@ footer .container .footer-links img {
   }
   footer {
     padding: 8rem 0 5rem;
+  }
+}
+
+[data-scroll] {
+  -webkit-transition: all 2s;
+  transition: all 2s;
+}
+
+[data-scroll="in"] {
+  -webkit-animation: comeIn 1s ease-in;
+          animation: comeIn 1s ease-in;
+}
+
+@-webkit-keyframes comeIn {
+  from {
+    opacity: 0;
+    -webkit-transform: translateX(-200px);
+            transform: translateX(-200px);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+@keyframes comeIn {
+  from {
+    opacity: 0;
+    -webkit-transform: translateX(-200px);
+            transform: translateX(-200px);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
   }
 }
 /*# sourceMappingURL=main.css.map */

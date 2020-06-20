@@ -67,10 +67,10 @@
             <h2>КАК ПРОХОДИТ КОНСУЛЬТАЦИЯ</h2>
             <div class="section-process__showcase">
                 <ul class="section-process__showcase--steps">
-                    <li class="step-1"><span class="section-process__showcase--steps-step">1</span><p class="section-process__showcase--steps-text">запись на консультацию</p></li>
-                    <li class="step-2"><span class="section-process__showcase--steps-step">2</span><p class="section-process__showcase--steps-text">беседа с пациентом</p></li>
-                    <li class="step-3"><span class="section-process__showcase--steps-step">3</span><p class="section-process__showcase--steps-text">схема лечения</p></li>
-                    <li class="step-4"><span class="section-process__showcase--steps-step">4</span><p class="section-process__showcase--steps-text">online поддержка</p></li>
+                    <li class="step-1" data-scroll><span class="section-process__showcase--steps-step">1</span><p class="section-process__showcase--steps-text">запись на консультацию</p></li>
+                    <li class="step-2" data-scroll><span class="section-process__showcase--steps-step">2</span><p class="section-process__showcase--steps-text">беседа с пациентом</p></li>
+                    <li class="step-3" data-scroll><span class="section-process__showcase--steps-step">3</span><p class="section-process__showcase--steps-text">схема лечения</p></li>
+                    <li class="step-4" data-scroll><span class="section-process__showcase--steps-step">4</span><p class="section-process__showcase--steps-text">online поддержка</p></li>
                 </ul>
                 <div class="section-process__showcase--illustration"><img src="./svg/nature.svg" alt=""></div>
             </div>
@@ -80,7 +80,7 @@
 
     <section class="section-components">
         <h2>ТРИ КЛЮЧЕВЫХ КОМПОНЕНТА</h2>
-        <div class="container">
+        <div class="container" data-scroll="">
             <div class="section-components__component">
                 <div class="section-components__component--icon"><img src="./svg/eat.svg" alt="Нож Вилка"></div>
                 <h3>ПИТАНИЕ</h3>
@@ -168,6 +168,15 @@
         </div>
     </footer>
     
+    <script src="https://unpkg.com/scroll-out/dist/scroll-out.min.js"></script>
+    <script>
+        ScrollOut(
+            {
+                once:true,
+                treshold: .5
+            }
+        );
+    </script>
     <script src="https://cdn.jsdelivr.net/npm/glider-js@1/glider.min.js"></script>
     <script>
         new Glider(document.querySelector('.glider'), {

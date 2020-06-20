@@ -183,6 +183,7 @@ header {
     &__img {
         width: 60%;
         margin: 0 auto;
+        animation: comeIn 1s ease-out;
     }
     &__textbox {
         text-align: center;
@@ -191,6 +192,7 @@ header {
             font-weight: 500;
             margin: .5rem 0 1rem;
         }
+        animation: comeIn 1s ease-out .2s;
     }
 }
 
@@ -627,5 +629,24 @@ footer {
 
     footer {
         padding: 8rem 0 5rem;
+    }
+}
+
+[data-scroll] {
+    transition: all 2s;
+}
+
+[data-scroll="in"] {
+    animation: comeIn 1s ease-in;
+}
+
+@keyframes comeIn {
+    from {
+        opacity: 0;
+        transform: translateX(-200px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
     }
 }
