@@ -13,6 +13,32 @@ $color-text-secondary: #444343;
     padding: 0;
 }
 
+.dots {
+    margin-top: 1rem;
+}
+
+.glider-contain {
+    position: relative;
+}
+
+.glider-prev, .glider-next {
+    color: $color-primary;
+    width: 50px;
+    top: 35%;
+    display: none;
+}
+
+.glider-prev {
+    position: absolute;
+    left: 2%;
+}
+
+.glider-next {
+    position: absolute;
+    right: 1%;
+    transform: rotate(180deg);
+}
+
 ::selection {
     background: $color-primary;
     color: black;
@@ -114,6 +140,7 @@ a {
 .btn-secondary {
     border: 2px $color-primary solid;
     color: $color-primary;
+    background-color: transparent;
 
     &:hover {
         background: $color-primary;
@@ -298,6 +325,7 @@ header {
     background-attachment: fixed;
     background-size: cover;
     &__testimonial {
+        margin: 0 1rem !important;
         background: white;
         box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.25);
         border-radius: 10px;
@@ -425,6 +453,9 @@ footer {
 }
 
 @media (min-width: 760px) {
+    .glider-next, .glider-prev {
+        display: block;
+    }
     #menu-mobile {
         display: none;
     }
@@ -509,7 +540,8 @@ footer {
             width: 50%;
 
             p {
-                font-size: .8rem;
+                font-size: .9rem;
+                line-height: 1.6rem;
             }
         }
     }
@@ -578,7 +610,7 @@ footer {
             margin: 0;
 
             .section-signup__text {
-                margin-bottom: 5rem;
+                margin-bottom: 4rem;
             }
 
             &::before {
