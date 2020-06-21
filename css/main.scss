@@ -27,6 +27,10 @@ $color-text-secondary: #444343;
     width: 50px;
     top: 35%;
     display: none;
+    
+    img {
+        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+    }
 }
 
 .glider-prev {
@@ -507,7 +511,7 @@ footer {
                 .nav-link {
                     a {
                         color: black;
-                        font-weight: 500;
+                        font-weight: 700;
                         &:hover {
                             color: $color-primary;
                         }
