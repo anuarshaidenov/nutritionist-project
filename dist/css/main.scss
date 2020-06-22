@@ -27,6 +27,7 @@ $color-text-secondary: #444343;
     width: 50px;
     top: 35%;
     display: none;
+
 }
 
 .glider-prev {
@@ -312,7 +313,7 @@ header {
         transition: transform .2s;
 
         &:hover {
-            transform: translateY(-.5rem);
+            transform: translateY(-10px);
         }
 
         &--icon {
@@ -507,7 +508,7 @@ footer {
                 .nav-link {
                     a {
                         color: black;
-                        font-weight: 500;
+                        font-weight: 700;
                         &:hover {
                             color: $color-primary;
                         }

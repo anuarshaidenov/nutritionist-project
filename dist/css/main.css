@@ -371,8 +371,8 @@ header nav .menu {
 }
 
 .section-components__component:hover {
-  -webkit-transform: translateY(-0.5rem);
-          transform: translateY(-0.5rem);
+  -webkit-transform: translateY(-10px);
+          transform: translateY(-10px);
 }
 
 .section-components__component--icon {
@@ -579,7 +579,7 @@ footer .container .footer-links img {
   }
   header nav .nav-links .nav-link a {
     color: black;
-    font-weight: 500;
+    font-weight: 700;
   }
   header nav .nav-links .nav-link a:hover {
     color: #2ECC71;
