@@ -9,20 +9,24 @@ let success = document.querySelector('.success');
 form.addEventListener('submit', e => {
     e.preventDefault();
 
-    const formData = new FormData(form);
-    fetch(form.getAttribute('action'), {
-        method: 'POST',
-        headers: {
-            'Accept' : 'application/x-www-form-i-urlencoded;charset=UTF-8',
-            'Content-type' : 'application/x-www-form-i-urlencoded;charset=UTF-8'
-        },
-        body: new URLSearchParams(formData).toString()
-    })
-    .then(res => {
-        if (res) {
-            success.classList.add('message-show');
-        }
-    });
+    if(number.value == null || number.value == ""){
+        error.classList.add('message-show');
+    } else {
+        const formData = new FormData(form);
+        fetch(form.getAttribute('action'), {
+            method: 'POST',
+            headers: {
+                'Accept' : 'application/x-www-form-i-urlencoded;charset=UTF-8',
+                'Content-type' : 'application/x-www-form-i-urlencoded;charset=UTF-8'
+            },
+            body: new URLSearchParams(formData).toString()
+        })
+        .then(res => {
+            if (res.ok) {
+                success.classList.add('message-show');
+            }
+        });
+    }
 });
 
 
