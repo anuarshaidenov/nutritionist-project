@@ -22,7 +22,7 @@ form.addEventListener('submit', e => {
             body: new URLSearchParams(formData).toString()
         })
         .then(res => {
-            if (res.ok) {
+            if (res) {
                 success.classList.add('message-show');
             }
         });
