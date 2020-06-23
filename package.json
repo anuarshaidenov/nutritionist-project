@@ -4,9 +4,7 @@
   "description": "Project website for Nutritionist",
   "main": "app.js",
   "scripts": {
-    "deploy": "gh-pages -d dist",
-    "serve": "node app",
-    "dev": "nodemon app"
+    "deploy": "gh-pages -d dist"
   },
   "repository": {
     "type": "git",
@@ -19,13 +17,7 @@
   },
   "homepage": "https://github.com/anuarshaidenov/nutritionist-project",
   "dependencies": {
-    "body-parser": "^1.19.0",
-    "express": "^4.17.1",
-    "gh-pages": "^3.0.0",
-    "nodemailer": "^6.4.10",
-    "request": "^2.88.2"
+    "gh-pages": "^3.0.0"
   },
-  "devDependencies": {
-    "nodemon": "^2.0.4"
-  }
+  "devDependencies": {}
 }
