@@ -33,11 +33,22 @@
           transform: rotate(180deg);
 }
 
-.error {
+.error, .success {
   display: none;
   margin-top: 1rem;
   text-align: center;
+}
+
+.error {
   color: red;
+}
+
+.success {
+  color: green;
+}
+
+.message-show {
+  display: block !important;
 }
 
 ::-moz-selection {

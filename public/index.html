@@ -161,15 +161,16 @@
         <div class="container">
             <div class="section-signup__left">
                 <p class="section-signup__text">ВСЕ ОЧЕНЬ ПРОСТО! ОСТАВЬТЕ СВОЙ WHAT’S APP ИЛИ TELEGRAM НОМЕР И Я БЫСТРО С ВАМИ СВЯЖУСЬ</p>
-                <form method="POST" data-netlify="true" class="section-signup__left--signup-form">
+                <form method="POST" data-netlify="true" action="/#signup" class="section-signup__left--signup-form">
                     <label for="name">Ваше имя</label>
                     <input type="text" name="name" id="name">
                     <label for="phone">What’s App или Telegram номер</label>
                     <input type="tel" name="phone" id="phone" required>
                     <label for="description">Что вас беспокоит? (по желанию)</label>
                     <textarea name="description" id="description" cols="30" rows="10"></textarea>
-                    <button type="submit" class="btn btn-cta">ЗАПИСАТЬСЯ</button>
+                    <button type="submit" class="btn btn-cta" id="submit-btn">ЗАПИСАТЬСЯ</button>
                     <p class="error">Пожалуйста введите свой номер</p>
+                    <p class="success">Ваша заявка была подана! Я свяжусь с вами очень скоро</p>
                 </form>
             </div>
             <div class="section-signup__right">
@@ -222,5 +223,6 @@
     <script src="./js/hamburger.js"></script>
     <script src="./js/navbar.js"></script>
     <script src="./js/scroll.js"></script>
+    <script src="./js/form.js"></script>
 </body>
 </html>
