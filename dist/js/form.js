@@ -16,8 +16,8 @@ form.addEventListener('submit', e => {
         fetch(form.getAttribute('action'), {
             method: 'POST',
             headers: {
-                'Accept' : 'application/x-www-form-i-urlencoded;charset=UTF-8',
-                'Content-type' : 'application/x-www-form-i-urlencoded;charset=UTF-8'
+                'Accept' : 'application/x-www-form-urlencoded;charset=UTF-8',
+                'Content-type' : 'application/x-www-form-urlencoded;charset=UTF-8'
             },
             body: new URLSearchParams(formData).toString()
         })
